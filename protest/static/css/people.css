@@ -1,0 +1,44 @@
+.container {
+	margin-left: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    font-family: arial;
+    background-color: white;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+button {
+    margin-top: 12px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(101, 101, 243);
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+button:hover, .card a:hover {
+    opacity: 0.7;
+}
+.card:hover{
+    transform: scale(1.1,1.1);
+}
+.card img{
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+}

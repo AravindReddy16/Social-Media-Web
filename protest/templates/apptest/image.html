@@ -1,0 +1,16 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+<p><a href="{% url 'profile' image.host.id %}">{{image.host}}</a></p>
+<img src="{{ image.image.url }}" width="200" height="200"/>
+<p>{{image.caption}}</p>
+<a href="{% url 'piclike' image.id user.id %}">Like</a> - {{likes}}
+<p><a href="{% url 'save' image.id user.id %}">Save</a></p>
+{% for comment in comments %}
+    <p>{{comment.comment}} - {{comment.hostname}}</p>
+{% endfor %}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+{% endblock %}

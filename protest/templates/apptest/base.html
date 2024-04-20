@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Page</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcome to Logo !</h1>
+    </div>
+    <div class="box">
+      <div class="logo"><a href="#">Logo</a></div>
+      <div class="box0"><a href="{% url 'logout' %}">Logout</a></div>
+      <div class="box0"><a href="{% url 'savelist' request.user.id %}">Saved</a></div>
+      <div class="box0"><a href="{% url 'profile' request.user.id %}">Profile</a></div>
+      <div class="box0"><a href="{% url 'videolist' %}">Videos</a></div>
+      <div class="box0"><a href="{% url 'piclist' %}">Photos</a></div>
+      <div class="box0"><a href="{% url 'home' %}">People</a></div>
+    </div>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

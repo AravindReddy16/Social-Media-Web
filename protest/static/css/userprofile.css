@@ -1,0 +1,34 @@
+.container{
+    width: 80%;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 130px;
+    background-color: white;
+    border-radius: 5px;
+}
+.container .box1{
+    float: left;
+}
+.container .box1 img{
+    margin-top: 30px;
+    margin-left: 150px;
+    width: 400px;
+    height: 450px;
+    border-radius: 5%;
+}
+.footer{
+    background-color: bisque;
+    margin-top: 0%;
+    margin-left: 60%;
+}
+.logo1{
+    float: left;
+    margin-left: 50px;
+}
+.logo1:hover{
+    transform: scale(1.3,1.3);
+}
+.footer .labelbox{
+    font-size: 20px;
+    font-style: italic;
+}

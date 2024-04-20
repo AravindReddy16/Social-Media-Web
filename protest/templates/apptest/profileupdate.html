@@ -1,0 +1,12 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label>Firstname: </label>{{userform.first_name}}</p>
+    <p><label>Lastname: </label>{{userform.last_name}}</p>
+    <p><label>Username: </label>{{userform.username}}</p>
+    <p><label>Email: </label>{{userform.email}}</p>
+    <p><label>Profile Pic:</label>{{profileform.profilepic}}</p>
+    <input type="submit">
+</form>
+{% endblock %}

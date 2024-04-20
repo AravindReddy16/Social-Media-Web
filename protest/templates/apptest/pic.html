@@ -1,0 +1,20 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+<h1>{{user}}</h1>
+<hr>
+{% if user == request.user %}
+    <a href="{% url 'addpic' user.id %}">Add Photo</a>
+{% endif %}
+<hr>
+<h2>Photos</h2>
+{% for image in images %}
+    <div class="image">
+        <a href="{% url 'image' image.id %}"><img src="{{ image.image.url }}" width="200" height="200"/></a>
+        <p>{{image.caption}}</p>
+        {% if user == request.user %}
+            <p><a href="{% url 'imagedelete' image.id %}">Delete</a></p>
+        {% endif %}
+    </div>
+{% endfor %}
+<hr>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'apptest/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{% static 'css/people.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            {% for user in users %}
+                <div class="card">
+                    <img src="{{ user.userprofile.profilepic.url }}" alt="ProfilePic">
+                    <h1>{{user}}</h1>
+                    <p><button><a href="{% url 'profile' user.id %}">View</a></button></p>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+{% endblock %}

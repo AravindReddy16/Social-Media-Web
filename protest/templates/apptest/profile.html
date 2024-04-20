@@ -1,0 +1,29 @@
+{% extends 'apptest/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1">
+                <img src="{{ user.userprofile.profilepic.url }}" alt="ProfilePic">
+            </div>
+            <div class="footer">
+                <div class="labelbox"><p><label>First Name: </label>{{user.firstname}}</p></div>
+                <div class="labelbox"><p><label>Last Name: </label>{{user.lastname}}</p></div>
+                <div class="labelbox"><p><label>Username: </label>{{user.username}}</p></div>
+                <div class="labelbox"><p><label>Email: </label>{{user.email}}</p></div>
+                <div class="footer0"><a href="{% url 'pic' user.id %}"><img src="{% static 'images\photos.jpeg' %}" alt="AddPic" class="logo1" width="70px"></a></div>
+                <div class="footer0"><a href="{% url 'vid' user.id %}"><img src="{% static 'images\video.webp' %}" alt="Addvid" class="logo1" width="60px"></a></div>
+                {% if user == request.user %}
+                    <div class="footer0"><a href="{% url 'profileupdate' user.id %}"><img src="{% static 'images\edit.png' %}" class="logo1" alt="Edit" width="60px"></a></div>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

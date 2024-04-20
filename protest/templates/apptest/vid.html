@@ -1,0 +1,19 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+<h1>{{user}}</h1>
+<hr>
+{% if user == request.user %}
+    <a href="{% url 'addvid' user.id %}">Add Video</a>
+{% endif %}
+<h2>Videos</h2>
+{% for video in videos %}
+    <video controls="controls" width="200" height="200">
+        <source src="{{video.video.url}}" type="video/mp4"/>
+    </video>
+    <p><a href="{% url 'vidcmt' video.id %}">{{video.caption}}</a></p>
+    {% if user == request.user %}
+        <p><a href="{% url 'videodelete' video.id %}">Delete</a></p>
+    {% endif %}
+{% endfor %}
+<hr>
+{% endblock %}

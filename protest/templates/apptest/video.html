@@ -1,0 +1,9 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+{% for video in videos %}
+    <video controls="controls" width="200" height="200">
+        <source src="{{video.video.url}}" type="video/mp4"/>
+    </video>
+    <p><a href="{% url 'vidcmt' video.id %}">{{video.caption}}</a></p>
+{% endfor %}
+{% endblock %}

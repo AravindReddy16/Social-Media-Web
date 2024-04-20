@@ -1,0 +1,39 @@
+.container{
+    width: 80%;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 130px;
+    background-color: white;
+    border-radius: 5px;
+}
+.container .box1{
+    background-color: aqua;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.container .box1 img{
+    margin-top: 50px;
+    margin-left: 150px;
+    width: 300px;
+    height: 400px;
+    border-radius: 5%;
+}
+.container .box2{
+    background-color: rgb(232, 145, 145);
+    width: 50%;
+    height: 90%;
+    float: right;
+    margin-top: 50px;
+}
+.container .box2 .labelbox{
+    background-color: white;
+    margin-left: 50px;
+}
+p{
+    font-size: 20px;
+}
+label{
+    background-color: aquamarine;
+    width: 300px;
+}

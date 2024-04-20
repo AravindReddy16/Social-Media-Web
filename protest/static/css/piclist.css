@@ -1,0 +1,25 @@
+.container {
+	margin-left: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+}
+.small {
+	width: 250px;
+	height: 300px;
+	position: relative;
+	margin: 3px;
+	border-radius: 5px;
+}
+.small:hover {
+	-webkit-transform: scale(1.03, 1.03);
+	transform: scale(1.03, 1.03);
+}
+a div {
+	position: relative;
+	margin: auto auto;
+	text-align: center;
+}
+.container a {
+	text-decoration: none;
+}

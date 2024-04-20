@@ -1,0 +1,18 @@
+{% extends 'apptest/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{% static 'css/piclist.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            {% for image in images %}
+                <a href="{% url 'image' image.id %}"><img class="small" src="{{ image.image.url }}" /></a>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+{% endblock %}

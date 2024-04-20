@@ -1,0 +1,16 @@
+<form method="POST" action="">
+    {% csrf_token %}
+    <p><label>First Name: </label><input type="text" placeholder="First Name" name="firstname"></p>
+    <p><label>Last Name: </label><input type="text" placeholder="Last Name" name="lastname"></p>
+    <p><label>Username: </label><input type="text" placeholder="Username" name="username"></p>
+    <p><label>Email: </label><input type="email" placeholder="Email" name="email"></p>
+    <p><label>Password: </label><input type="password" placeholder="Password" name="password1"></p>
+    <p><label>Confirm Password: </label><input type="password" placeholder="Password" name="password2"></p>
+    {% if messages %}
+        {% for message in messages %}
+            <h5>{{message}}</h5>
+        {% endfor %}
+    {% endif %}
+    <input type="submit" value="Register">
+    <a href="{% url 'login' %}" style="text-decoration:none">Login</a>
+</form>

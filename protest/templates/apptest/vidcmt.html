@@ -1,0 +1,18 @@
+{% extends 'apptest/base.html' %}
+{% block content %}
+<p><a href="{% url 'profile' video.host.id %}">{{video.host}}</a></p>
+<video controls="controls" width="200" height="200">
+    <source src="{{video.video.url}}" type="video/mp4"/>
+</video>
+<p>{{video.caption}}</p>
+<a href="{% url 'vidlike' video.id user.id %}">Like</a> - {{likes}}
+<p><a href="{% url 'vidsave' video.id user.id %}">Save</a></p>
+{% for comment in comments %}
+    <p>{{comment.comment}} - {{comment.hostname}}</p>
+{% endfor %}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+{% endblock %}
