@@ -1,5 +1,10 @@
 # Social Media Web
 
+
+https://github.com/user-attachments/assets/d3384e20-215a-43bb-a1cf-d9e66abd6d5f
+
+
+
 `Social Media Web` is a Python-based web application that mimics the core features of popular social media platforms. This project is ideal for developers seeking to understand how to build scalable social media applications using web technologies. The app supports basic user interactions, content sharing, and engagement, and serves as a foundational structure for expanding to a full-fledged social media site.
 
 ## Features
